@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Roshan Namdev Shikhare</h1>
 <h3 align="center">A passionate full stack developer from India</h3>
 
-- 🔭 I’m currently working on [IndiaFirst Life Insurance](https://www.indiafirstlife.com/)
+- 🔭 I’m currently working at [DEPT](https://www.deptagency.com/)
 
 - 🌱 I’m currently learning **Flutter, Python etc.**
 
-- 💬 Ask me about **React JavaScript Angular PostgreSQL NodeJS**
+- 💬 Ask me about **React JavaScript Angular PostgreSQL NodeJS MongoDB Express**
 
 - 📫 How to reach me **roshan.n.shikhare@gmail.com**
 
