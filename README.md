@@ -9,7 +9,7 @@
 
 - 📫 How to reach me **roshan.n.shikhare@gmail.com**
 
-- 📄 Know about my experiences [https://docs.google.com/document/d/1Ln0GW1PSxfcrfI_8O2-l51xYeQR8xuiZDIdC_yYPPGc/edit?usp=sharing](https://docs.google.com/document/d/1Ln0GW1PSxfcrfI_8O2-l51xYeQR8xuiZDIdC_yYPPGc/edit?usp=sharing)
+- 📄 Know about my experiences [My Resume](https://docs.google.com/document/d/1Ln0GW1PSxfcrfI_8O2-l51xYeQR8xuiZDIdC_yYPPGc/edit?usp=sharing)
 
 - ⚡ Fun fact **🎧 I’m passionate about music and love nothing more than diving into code, exploring new technologies, and learning new languages. It's like creating my own symphony of innovation!**
 
