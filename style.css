@@ -1,0 +1,179 @@
+/* --------------------------------------------------------------------------
+   Life at DEPT® — styles extracted / matched from deptagency.com culture page
+   Source CSS: applicationBlocks + application theme bundles
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  src: url("https://www.deptagency.com/wp-content/themes/dept/public/InterVariable.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+:root {
+  --global-colors-black: #000;
+  --global-colors-white: #fff;
+  --dept-font-family: "InterVariable", system-ui, sans-serif;
+  --dept-h-gutter: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--global-colors-black);
+  background-color: var(--global-colors-white);
+  position: relative;
+  overflow-x: hidden;
+  font-family: var(--dept-font-family) !important;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  vertical-align: middle;
+  display: block;
+}
+
+/* Demo spacers — provide scroll runway like surrounding page sections */
+.page-spacer {
+  width: 100%;
+  pointer-events: none;
+}
+
+.page-spacer--top {
+  min-height: 70vh;
+}
+
+.page-spacer--bottom {
+  min-height: 120vh;
+}
+
+/* --------------------------------------------------------------------------
+   Typography utilities used by this block
+   -------------------------------------------------------------------------- */
+
+.text-sans-92 {
+  font-family: var(--dept-font-family);
+  font-synthesis: none;
+  letter-spacing: -0.03em;
+  font-size: max(3rem, min(4.883vw + 1.856rem, 5.75rem));
+  line-height: 0.9;
+}
+
+.text-sans-24 {
+  font-family: var(--dept-font-family);
+  font-synthesis: none;
+  letter-spacing: -0.048em;
+  font-size: max(1.25rem, min(0.376vw + 1.162rem, 1.5rem));
+  line-height: max(1.75rem, min(0.368vw + 1.664rem, 1.995rem));
+}
+
+.is-bold-sans {
+  font-family: var(--dept-font-family);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* --------------------------------------------------------------------------
+   block-heading-text-image
+   -------------------------------------------------------------------------- */
+
+.block-heading-text-image {
+  margin-top: max(3.75rem, min(5.6338vw + 2.42958rem, 7.5rem));
+  margin-bottom: max(2.5rem, min(3.0047vw + 1.79577rem, 4.5rem));
+}
+
+.block-heading-text-image__wrap {
+  padding-inline: var(--dept-h-gutter);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  column-gap: 1.25rem;
+  padding-top: max(3.75rem, min(4.69484vw + 2.64965rem, 6.875rem));
+  padding-bottom: max(2.5rem, min(3.0047vw + 1.79577rem, 4.5rem));
+  display: grid;
+}
+
+.block-heading-text-image__title {
+  text-wrap: balance;
+  grid-column: span 12;
+  margin: 0 0 max(3.75rem, min(0.938967vw + 3.52993rem, 4.375rem));
+  /* font-weight comes from .is-bold-sans (900) — matches live cascade */
+  text-transform: uppercase;
+}
+
+.block-heading-text-image__title .line {
+  overflow-y: clip;
+}
+
+.block-heading-text-image__text {
+  grid-column: span 12;
+  margin: 0;
+}
+
+.block-heading-text-image__grid-media {
+  width: 100%;
+  overflow: hidden;
+}
+
+.block-heading-text-image__grid-media-wrap {
+  transform-origin: top;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 0.2rem;
+  display: grid;
+  will-change: transform, gap;
+}
+
+.block-heading-text-image__grid-media-item {
+  object-fit: cover;
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #e8e8e8;
+}
+
+/*
+  Desktop title / text column span + 15-column grid
+  Breakpoints match the live stylesheet exactly.
+*/
+@media (min-width: 992px) and (max-width: 1199px),
+  (min-width: 1440px) and (max-width: 1800px),
+  (min-width: 1200px) {
+  .block-heading-text-image__title {
+    grid-column: 1 / span 7;
+  }
+
+  .block-heading-text-image__text {
+    grid-column: 1 / span 7;
+  }
+
+  .block-heading-text-image__grid-media-wrap {
+    grid-template-columns: repeat(15, minmax(0, 1fr));
+  }
+}
+
+/* Prefer reduced motion: keep layout, drop scroll zoom feel via CSS fallback */
+@media (prefers-reduced-motion: reduce) {
+  .block-heading-text-image__grid-media-wrap {
+    transform: none !important;
+    gap: 0.2rem !important;
+  }
+}
